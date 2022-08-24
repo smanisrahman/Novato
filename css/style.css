@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&display=swap");
+
+:root {
+  --primary: #0f69ff;
+  --dark: #272d3d;
+  --body: #888;
+  --box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  line-height: 1.7;
+  color: var(--body);
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar .nav-link {
+  font-size: 14px;
+  font-weight: 700;
+}
+li.nav-item {
+  margin-top: 10px;
+}
+.navbar .nav-link.active {
+  color: var(--primary) !important;
+}
+
+.btn {
+  padding: 14px 18px;
+  border-width: 2px;
+  border-radius: 0;
+}
+
+
+.hero {
+  background-image: url(../images/land-scape.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+#Service, #Portfolio, #Pricing, #team, #Blog, #contact {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.card-effect {
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  padding: 25px;
+  transition: all .35s ease;
+}
+
+.card-effect:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.iconbox {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  flex: none;
+  margin-right: 3rem;
+}
+
+.service {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.service::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+
+.service:hover .iconbox {
+  background-color: #fff;
+  color: var(--primary)
+}
+
+.service:hover h5,
+.service:hover p {
+  color: #fff;
+  ;
+}
+
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+
+.col-img {
+  background-image: url(../images/999.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 11, 16, 0.5);
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.projects img {
+  transition: all 0.4s ease;
+}
+
+.projects:hover .overlay {
+  opacity: 1;
+}
+
+.projects:hover img {
+  transform: scale(1.1);
+}
+
+.pricing i {
+  font-size: 20px;
+  color: var(--primary);
+  margin-right: 1rem;
+}
+
+.pricing ul li {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link a {
+  width: 34px;
+  height: 34px;
+  background-color: var(--primary);
+  border-radius: 2px solid var(--primary);
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 5px;
+  transition: all 0.4s ease;
+  border: 2px solid var(--primary);
+}
+
+.social-link a:hover {
+  color: var(--primary);
+  background-color: transparent;
+  border-color: var(--primary);
+}
+
+form input.form-control {
+  height: 55px;
+}
+
+form .form-control {
+  border: transparent;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.footer-top {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.footer-height {
+  margin-top: 44px;
+}
+
+.footer-logo {
+  max-width: 200px;
+  max-height: 75px;
+
+}
+
+.footer-top a {
+  color: var(--body);
+  text-decoration: none;
+}
+.footer-bottom{
+  background-color: #242933;
+}
